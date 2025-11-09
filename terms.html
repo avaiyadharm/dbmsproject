@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Terms | Maximum rent-a-car</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .term-item:hover {
+            background-color: #f9fafb;
+        }
+    </style>
+</head>
+<body class="font-['Inter'] bg-white text-gray-900">
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="text-red-600 font-bold text-2xl">Maximum</span>
+                <span class="font-bold text-2xl">rent-a-car</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-black hover:text-red-600 font-medium">Home</a>
+                <a href="business.html" class="text-black hover:text-red-600 font-medium">Business</a>
+                <a href="about.html" class="text-black hover:text-red-600 font-medium">About Us</a>
+                <a href="vehicles.html" class="text-black hover:text-red-600 font-medium">Vehicles</a>
+                <a href="terms.html" class="text-red-600 font-medium">Rental Terms</a>
+                <a href="contact.html" class="text-black hover:text-red-600 font-medium">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button class="text-black focus:outline-none">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Rental Terms</h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Get informed about the rules and conditions for renting a vehicle with Maximum rent-a-car.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Key Terms at a Glance</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">The most important information in one place.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="term-item bg-gray-50 p-6 rounded-xl transition duration-300">
+                    <div class="text-red-600 mb-4">
+                        <i data-feather="calendar" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Minimum Rental</h3>
+                    <p class="text-gray-600">The minimum rental duration is 24 hours. Short-term rentals are available for a special fee.</p>
+                </div>
+                
+                <div class="term-item bg-gray-50 p-6 rounded-xl transition duration-300">
+                    <div class="text-red-600 mb-4">
+                        <i data-feather="user-check" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Age Limits</h3>
+                    <p class="text-gray-600">Rental permitted for persons aged 21 and older with a minimum of 2 years of driving experience.</p>
+                </div>
+                
+                <div class="term-item bg-gray-50 p-6 rounded-xl transition duration-300">
+                    <div class="text-red-600 mb-4">
+                        <i data-feather="credit-card" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Deposit</h3>
+                    <p class="text-gray-600">The deposit ranges from 500 to 1500 EUR depending on the vehicle category. It is fully refunded after the vehicle return.</p>
+                </div>
+                
+                <div class="term-item bg-gray-50 p-6 rounded-xl transition duration-300">
+                    <div class="text-red-600 mb-4">
+                        <i data-feather="shield" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Insurance</h3>
+                    <p class="text-gray-600">All vehicles have basic comprehensive insurance with deductible (excess). Full insurance is available for an additional fee.</p>
+                </div>
+                
+                <div class="term-item bg-gray-50 p-6 rounded-xl transition duration-300">
+                    <div class="text-red-600 mb-4">
+                        <i data-feather="droplet" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Fuel</h3>
+                    <p class="text-gray-600">The vehicle is rented with a full tank and must be returned with a full tank.</p>
+                </div>
+                
+                <div class="term-item bg-gray-50 p-6 rounded-xl transition duration-300">
+                    <div class="text-red-600 mb-4">
+                        <i data-feather="clock" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Return Time</h3>
+                    <p class="text-gray-600">Delay in returning the vehicle after the agreed time will be charged as an additional rental day.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Detailed Rental Conditions</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Everything you need to know before booking a vehicle.</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold mb-4 text-red-600">1. General Conditions</h3>
+                    <p class="text-gray-600 mb-4">All users of Maximum rent-a-car services are obliged to adhere to these rental conditions. The rental agreement enters into force upon signature by the contracting parties and is valid for the specified period of vehicle use.</p>
+                    <p class="text-gray-600">Rentals can be made online via our website or directly at our branches. A down payment of 30% of the total rental amount is required to confirm the reservation.</p>
+                </div>
+                
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold mb-4 text-red-600">2. Renter's Obligations</h3>
+                    <p class="text-gray-600 mb-4">The renter is obliged to:</p>
+                    <ul class="list-disc pl-6 text-gray-600 space-y-2">
+                        <li>Use the vehicle in accordance with its purpose and technical capabilities</li>
+                        <li>Comply with legal provisions on traffic safety</li>
+                        <li>Not transfer the vehicle to third parties without the written permission of Maximum rent-a-car</li>
+                        <li>Immediately report any damage to the vehicle or traffic accident</li>
+                        <li>Return the vehicle within the agreed period and in the condition in which it was received</li>
+                    </ul>
+                </div>
+                
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold mb-4 text-red-600">3. Prices and Payment</h3>
+                    <p class="text-gray-600 mb-4">Rental prices include:</p>
+                    <ul class="list-disc pl-6 text-gray-600 space-y-2">
+                        <li>Unlimited mileage</li>
+                        <li>Basic vehicle insurance</li>
+                        <li>24/7 roadside assistance</li>
+                        <li>VAT according to applicable rates</li>
+                    </ul>
+                    <p class="text-gray-600 mt-4">Additional fees may apply for:</p>
+                    <ul class="list-disc pl-6 text-gray-600 space-y-2">
+                        <li>Additional drivers</li>
+                        <li>Crossing state borders (upon request)</li>
+                        <li>Child seats</li>
+                        <li>GPS navigation</li>
+                    </ul>
+                </div>
+                
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold mb-4 text-red-600">4. Insurance and Liability</h3>
+                    <p class="text-gray-600 mb-4">All vehicles are insured according to legal provisions. The renter bears financial responsibility for all damage to the vehicle and third parties resulting from:</p>
+                    <ul class="list-disc pl-6 text-gray-600 space-y-2">
+                        <li>Using the vehicle under the influence of alcohol or narcotics</li>
+                        <li>Unauthorized driving</li>
+                        <li>Using the vehicle outside the agreed conditions</li>
+                        <li>Non-compliance with traffic regulations</li>
+                    </ul>
+                </div>
+                
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold mb-4 text-red-600">5. Reservation Cancellation</h3>
+                    <p class="text-gray-600 mb-4">Reservations can be canceled free of charge no later than 24 hours before the planned vehicle pickup. For cancellations within less than 24 hours, a fee equal to 50% of the total rental price will be charged.</p>
+                    <p class="text-gray-600">Maximum rent-a-car reserves the right to cancel the reservation in case of force majeure or technical problems with the vehicle, with a full refund of the paid amount.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Answers to the most common questions related to vehicle rental.</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="mb-6 border-b border-gray-200 pb-6">
+                    <h3 class="text-xl font-bold mb-3">What is the deposit for vehicle rental?</h3>
+                    <p class="text-gray-600">The deposit depends on the vehicle category and ranges from 500 to 1500 EUR. The exact deposit amount will be shown to you during the reservation process. The deposit is fully refunded after the vehicle is inspected and determined to have no damage.</p>
+                </div>
+                
+                <div class="mb-6 border-b border-gray-200 pb-6">
+                    <h3 class="text-xl font-bold mb-3">What is included in the rental price?</h3>
+                    <p class="text-gray-600">The basic rental price includes unlimited mileage, basic vehicle insurance (comprehensive with deductible), 24/7 roadside assistance, and VAT. Additional services such as an extra driver, GPS navigation, or child seats are charged separately.</p>
+                </div>
+                
+                <div class="mb-6 border-b border-gray-200 pb-6">
+                    <h3 class="text-xl font-bold mb-3">Can I cross the border with the rented vehicle?</h3>
+                    <p class="text-gray-600">Yes, international rental is possible with prior notice and an additional fee for crossing the border. A list of permitted countries is available at our branches. An additional agreement must be signed before crossing the border.</p>
+                </div>
+                
+                <div class="mb-6 border-b border-gray-200 pb-6">
+                    <h3 class="text-xl font-bold mb-3">What if a traffic accident occurs?</h3>
+                    <p class="text-gray-600">In the event of a traffic accident, contact us immediately at the emergency number listed in the rental agreement. Before leaving the scene of the accident, be sure to collect information about other participants and request a police report. Do not repair anything on the vehicle without our authorization.</p>
+                </div>
+                
+                <div class="mb-6 border-b border-gray-200 pb-6">
+                    <h3 class="text-xl font-bold mb-3">Can I extend the vehicle rental?</h3>
+                    <p class="text-gray-600">Yes, you can extend the rental by contacting us at least 24 hours before the expiry of the current rental agreement. Extension is possible with our consent and depends on vehicle availability. An additional fee will be charged for extending the rental beyond the initially agreed period.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-red-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Still have questions?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Our team is always available to provide you with further clarification and assistance.</p>
+            <a href="contact.html" class="inline-block bg-white text-red-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition duration-300">Contact Us</a>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <span class="text-red-600 font-bold text-2xl">Maximum</span>
+                        <span class="font-bold text-2xl">rent-a-car</span>
+                    </div>
+                    <p class="text-gray-400">Premium mobile solutions for business and leisure.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="business.html" class="text-gray-400 hover:text-white transition">Business</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="vehicles.html" class="text-gray-400 hover:text-white transition">Vehicles</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Information</h3>
+                    <ul class="space-y-2">
+                        <li><a href="terms.html" class="text-gray-400 hover:text-white transition">Rental Terms</a></li>
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="faq.html" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i data-feather="phone" class="w-4 h-4 mr-2"></i>
+                            <span class="text-gray-400">+385 1 1234 567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="mail" class="w-4 h-4 mr-2"></i>
+                            <span class="text-gray-400">info@maximum-rent.hr</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="map-pin" class="w-4 h-4 mr-2"></i>
+                            <span class="text-gray-400">Poslovna ulica 123, Zagreb (Business Street 123, Zagreb)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2023 Maximum rent-a-car. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

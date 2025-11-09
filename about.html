@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Maximum rent-a-car</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(200,0,0,0.6) 100%);
+        }
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="font-['Inter'] bg-white text-gray-900">
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="text-red-600 font-bold text-2xl">Maximum</span>
+                <span class="font-bold text-2xl">rent-a-car</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-black hover:text-red-600 font-medium">Home</a>
+                <a href="business.html" class="text-black hover:text-red-600 font-medium">Business</a>
+                <a href="about.html" class="text-red-600 font-medium">About Us</a>
+                <a href="vehicles.html" class="text-black hover:text-red-600 font-medium">Vehicles</a>
+                <a href="terms.html" class="text-black hover:text-red-600 font-medium">Rental Terms</a>
+                <a href="contact.html" class="text-black hover:text-red-600 font-medium">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button class="text-black focus:outline-none">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex items-center relative overflow-hidden bg-black">
+        <div class="absolute inset-0 z-0 opacity-70">
+            <img src="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1800&q=80" 
+                 alt="About Maximum rent-a-car" 
+                 class="w-full h-full object-cover"
+                 loading="eager">
+        </div>
+        <div class="container mx-auto px-6 z-10 relative">
+            <div class="max-w-2xl">
+                <h1 class="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">Our Story of <br><span class="text-red-500">Premium Mobility</span></h1>
+                <p class="text-xl text-gray-200 mb-8">From humble beginnings to a leading rent-a-car operator - our passion is to provide you with an unforgettable driving experience.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#story" class="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition duration-300 text-center">Find out more</a>
+                    <a href="contact.html" class="bg-white hover:bg-gray-100 text-black px-8 py-3 rounded-lg font-semibold transition duration-300 text-center">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="story" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
+                    <p class="text-gray-600 mb-4">Maximum rent-a-car was founded in 2010 with a single vehicle and big dreams. Today, we are a leading regional rent-a-car provider with over 1000 vehicles in our fleet.</p>
+                    <p class="text-gray-600 mb-4">Our vision was clear - to redefine the car rental experience through transparency, premium service, and luxury vehicles.</p>
+                    <p class="text-gray-600">We strive daily to realize that vision, and your trust and satisfaction are our greatest reward.</p>
+                </div>
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1521790361543-f645cf042ec4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                         alt="Our story" 
+                         class="w-full rounded-xl shadow-lg">
+                    <div class="absolute -bottom-6 -left-6 bg-red-600 text-white p-4 rounded-lg shadow-lg">
+                        <p class="text-xl font-bold">10+</p>
+                        <p class="text-sm">Years of Experience</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                         alt="Our mission" 
+                         class="w-full rounded-xl shadow-lg">
+                </div>
+                <div class="order-1 md:order-2">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Mission and Vision</h2>
+                    <div class="mb-6">
+                        <h3 class="text-xl font-bold mb-2 text-red-600">Our Mission</h3>
+                        <p class="text-gray-600">To provide premium mobile solutions through personalized service, a top-tier vehicle fleet, and innovative digital booking capabilities.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 text-red-600">Our Vision</h3>
+                        <p class="text-gray-600">To become a synonym for the premium rent-a-car experience in the region, with continuous investment in technology, vehicles, and human resources.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Meet Our Team</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">The experts behind your flawless rental experience.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="team-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-32 h-32 rounded-full overflow-hidden mx-auto mb-6">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" 
+                             alt="Marko Horvat" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-2">Marko Horvat</h3>
+                    <p class="text-red-600 text-center mb-4">General Manager</p>
+                    <p class="text-gray-600 text-center">"Our focus is always on the client. Every detail of your experience is carefully thought out."</p>
+                </div>
+                
+                <div class="team-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-32 h-32 rounded-full overflow-hidden mx-auto mb-6">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" 
+                             alt="Ana Kovač" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-2">Ana Kovač</h3>
+                    <p class="text-red-600 text-center mb-4">Head of Customer Support</p>
+                    <p class="text-gray-600 text-center">"Your satisfaction is my priority. I am always here for all your questions and needs."</p>
+                </div>
+                
+                <div class="team-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-32 h-32 rounded-full overflow-hidden mx-auto mb-6">
+                        <img src="https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" 
+                             alt="Ivan Petrić" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-2">Ivan Petrić</h3>
+                    <p class="text-red-600 text-center mb-4">Fleet Manager</p>
+                    <p class="text-gray-600 text-center">"Every vehicle in our fleet undergoes rigorous inspections to ensure your safety and comfort."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Advantage</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">What makes us special compared to the competition?</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i data-feather="award" class="w-8 h-8 text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3">Premium Quality</h3>
+                    <p class="text-gray-600 text-center">All our vehicles are the latest models with the highest safety ratings.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i data-feather="heart" class="w-8 h-8 text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3">100% Satisfaction</h3>
+                    <p class="text-gray-600 text-center">Our clients rate us with an average of 4.9/5 on all platforms.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i data-feather="clock" class="w-8 h-8 text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3">Speed</h3>
+                    <p class="text-gray-600 text-center">The vehicle booking and pickup process takes less than 5 minutes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Partners and Certifications</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Reliability recognized by leading industry players.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow flex items-center justify-center">
+                    <img src="https://via.placeholder.com/150x60?text=BMW" alt="BMW" class="h-10">
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow flex items-center justify-center">
+                    <img src="https://via.placeholder.com/150x60?text=Mercedes" alt="Mercedes" class="h-10">
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow flex items-center justify-center">
+                    <img src="https://via.placeholder.com/150x60?text=Audi" alt="Audi" class="h-10">
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow flex items-center justify-center">
+                    <img src="https://via.placeholder.com/150x60?text=ISO+9001" alt="ISO 9001" class="h-10">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-red-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Experience the Difference?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Book your premium vehicle today and enter the world of uncompromising quality.</p>
+            <a href="vehicles.html" class="inline-block bg-white text-red-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition duration-300">Book a Vehicle</a>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <span class="text-red-600 font-bold text-2xl">Maximum</span>
+                        <span class="font-bold text-2xl">rent-a-car</span>
+                    </div>
+                    <p class="text-gray-400">Premium mobile solutions for business and leisure.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="business.html" class="text-gray-400 hover:text-white transition">Business</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="vehicles.html" class="text-gray-400 hover:text-white transition">Vehicles</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Information</h3>
+                    <ul class="space-y-2">
+                        <li><a href="terms.html" class="text-gray-400 hover:text-white transition">Rental Terms</a></li>
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="faq.html" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i data-feather="phone" class="w-4 h-4 mr-2"></i>
+                            <span class="text-gray-400">+385 1 1234 567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="mail" class="w-4 h-4 mr-2"></i>
+                            <span class="text-gray-400">info@maximum-rent.hr</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="map-pin" class="w-4 h-4 mr-2"></i>
+                            <span class="text-gray-400">Poslovna ulica 123, Zagreb (Business Street 123, Zagreb)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2023 Maximum rent-a-car. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

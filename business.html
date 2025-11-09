@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Solutions | Maximum rent-a-car</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(200,0,0,0.6) 100%);
+        }
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="font-['Inter'] bg-white text-gray-900">
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="text-red-600 font-bold text-2xl">Maximum</span>
+                <span class="font-bold text-2xl">rent-a-car</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-black hover:text-red-600 font-medium">Home</a>
+                <a href="business.html" class="text-red-600 font-medium">Business</a>
+                <a href="about.html" class="text-black hover:text-red-600 font-medium">About Us</a>
+                <a href="vehicles.html" class="text-black hover:text-red-600 font-medium">Vehicles</a>
+                <a href="terms.html" class="text-black hover:text-red-600 font-medium">Rental Terms</a>
+                <a href="contact.html" class="text-black hover:text-red-600 font-medium">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button class="text-black focus:outline-none">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex items-center relative overflow-hidden bg-black">
+        <div class="absolute inset-0 z-0 opacity-70">
+            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1800&q=80" 
+                 alt="Business car rental" 
+                 class="w-full h-full object-cover"
+                 loading="eager">
+        </div>
+        <div class="container mx-auto px-6 z-10 relative">
+            <div class="max-w-2xl">
+                <h1 class="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">Business Mobility <br><span class="text-red-500">Solutions</span></h1>
+                <p class="text-xl text-gray-200 mb-8">Simplified fleet management for businesses of all sizes. Reduce costs while maintaining premium standards.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contact" class="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition duration-300 text-center">Request a Quote</a>
+                    <a href="#solutions" class="bg-white hover:bg-gray-100 text-black px-8 py-3 rounded-lg font-semibold transition duration-300 text-center">View Solutions</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="solutions" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Business Fleet Challenges?</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">We understand the unique challenges businesses face in managing vehicles.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="text-red-600 mb-4">
+                        <i data-feather="dollar-sign" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Capital Intensive</h3>
+                    <p class="text-gray-600">Owning a fleet ties up capital and depreciates quickly. Our rental solutions free up your balance sheet.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="text-red-600 mb-4">
+                        <i data-feather="tool" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Maintenance</h3>
+                    <p class="text-gray-600">No more unexpected repair bills or downtime. We handle all maintenance with 24/7 replacement guarantee.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="text-red-600 mb-4">
+                        <i data-feather="trending-down" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Underutilization</h3>
+                    <p class="text-gray-600">Scale your fleet up or down as needed. Pay only for what you use with our flexible plans.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Business Advantages</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Custom solutions designed for corporate efficiency and cost control.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="benefit-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="file-text" class="w-8 h-8 text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Consolidated Billing</h3>
+                    <p class="text-gray-600">One monthly invoice for all rentals with detailed usage reporting.</p>
+                </div>
+                
+                <div class="benefit-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="award" class="w-8 h-8 text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Priority Service</h3>
+                    <p class="text-gray-600">Dedicated account manager and guaranteed vehicle availability.</p>
+                </div>
+                
+                <div class="benefit-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="shield" class="w-8 h-8 text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Full Coverage</h3>
+                    <p class="text-gray-600">Comprehensive insurance included with zero-deductible options.</p>
+                </div>
+                
+                <div class="benefit-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="clock" class="w-8 h-8 text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">24/7 Support</h3>
+                    <p class="text-gray-600">Assistance at all times for your business travelers.</p>
+                </div>
+                
+                <div class="benefit-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="percent" class="w-8 h-8 text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Volume Discounts</h3>
+                    <p class="text-gray-600">Significant savings for long-term rentals and fleet agreements.</p>
+                </div>
+                
+                <div class="benefit-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="map-pin" class="w-8 h-8 text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Nationwide Availability</h3>
+                    <p class="text-gray-600">Pickup and drop-off at any of our nationwide locations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Industry Leaders Trust Us</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">See how we helped companies optimize their mobile solutions.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                            <i data-feather="briefcase" class="w-6 h-6 text-red-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Consulting Firm</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">"We reduced our fleet costs by 40% while maintaining premium service quality for our executives. Flexibility was invaluable for our project needs."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full overflow-hidden mr-3">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" 
+                                 alt="Ana Horvat" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <p class="font-medium">Ana Horvat</p>
+                            <p class="text-sm text-gray-500">Director of Operations</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                            <i data-feather="truck" class="w-6 h-6 text-red-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Logistics Company</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">"The account management portal gives us real-time insight into all rentals across 12 locations. Report integration saved us dozens of hours monthly."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full overflow-hidden mr-3">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" 
+                                 alt="Ivan Kovač" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <p class="font-medium">Ivan Kovač</p>
+                            <p class="text-sm text-gray-500">Fleet Manager</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-white p-6 rounded-lg shadow flex items-center justify-center">
+                    <img src="https://via.placeholder.com/150x60?text=TechCorp" alt="TechCorp" class="h-8">
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow flex items-center justify-center">
+                    <img src="https://via.placeholder.com/150x60?text=Global+Bank" alt="Global Bank" class="h-8">
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow flex items-center justify-center">
+                    <img src="https://via.placeholder.com/150x60?text=Acme+Inc" alt="Acme Inc" class="h-8">
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow flex items-center justify-center">
+                    <img src="https://via.placeholder.com/150x60?text=Vertex" alt="Vertex" class="h-8">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-red-600 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Optimize Your Fleet?</h2>
+                <p class="text-xl text-red-100 max-w-3xl mx-auto">Our business experts will create a customized quote for your organization.</p>
+            </div>
+            
+            <div class="max-w-2xl mx-auto">
+                <form class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium mb-1">Name</label>
+                        <input type="text" id="name" class="w-full px-4 py-2 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white">
+                    </div>
+                    <div>
+                        <label for="company" class="block text-sm font-medium mb-1">Company</label>
+                        <input type="text" id="company" class="w-full px-4 py-2 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium mb-1">E-mail</label>
+                        <input type="email" id="email" class="w-full px-4 py-2 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white">
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-sm font-medium mb-1">Phone</label>
+                        <input type="tel" id="phone" class="w-full px-4 py-2 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white">
+                    </div>
+                    <div class="md:col-span-2">
+                        <label for="message" class="block text-sm font-medium mb-1">Requirements</label>
+                        <textarea id="message" rows="4" class="w-full px-4 py-2 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white"></textarea>
+                    </div>
+                    <div class="md:col-span-2">
+                        <button type="submit" class="w-full bg-white text-red-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition duration-300">Request a Quote</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <span class="text-red-600 font-bold text-2xl">Maximum</span>
+                        <span class="font-bold text-2xl">rent-a-car</span>
+                    </div>
+                    <p class="text-gray-400">Premium mobile solutions for business and leisure.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="business.html" class="text-gray-400 hover:text-white transition">Business</a></li>
+                        <li><a href="vehicles.html" class="text-gray-400 hover:text-white transition">Vehicles</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Business</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Corporate Accounts</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Fleet Solutions</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Long-Term Rental</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Partnerships</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i data-feather="phone" class="w-4 h-4 mr-2"></i>
+                            <span class="text-gray-400">+385 1 1234 567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="mail" class="w-4 h-4 mr-2"></i>
+                            <span class="text-gray-400">poslovni@maximum-rent.hr</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="map-pin" class="w-4 h-4 mr-2"></i>
+                            <span class="text-gray-400">Poslovna ulica 123, Zagreb (Business Street 123, Zagreb)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2023 Maximum rent-a-car. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

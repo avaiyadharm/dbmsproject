@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maximum rent-a-car | Premium Car Rental Service</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(200, 0, 0, 0.6) 100%);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .vehicle-card:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+
+<body class="font-['Inter'] bg-white text-gray-900">
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="text-red-600 font-bold text-2xl">Maximum</span>
+                <span class="font-bold text-2xl">rent-a-car</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-red-600 font-medium">Home</a>
+                <a href="business.html" class="text-black hover:text-red-600 font-medium">Business</a>
+                <a href="about.html" class="text-black hover:text-red-600 font-medium">About Us</a>
+                <a href="vehicles.html" class="text-black hover:text-red-600 font-medium">Vehicles</a>
+                <a href="terms.html" class="text-black hover:text-red-600 font-medium">Rental Terms</a>
+                <a href="contact.html" class="text-black hover:text-red-600 font-medium">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button class="text-black focus:outline-none">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <section id="hero" class="min-h-screen flex items-center relative overflow-hidden bg-black">
+        <div class="absolute inset-0 z-0 opacity-70">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-1.2.1&auto=format&fit=crop&w=1800&q=80"
+                alt="Luxury car rental" class="w-full h-full object-cover" loading="eager">
+        </div>
+        <div class="container mx-auto px-6 z-10 relative">
+            <div class="max-w-2xl">
+                <h1 class="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">Drive Your Dreams <br><span
+                        class="text-red-500">Without Limits</span></h1>
+                <p class="text-xl text-gray-200 mb-8">Unrivaled luxury, transparent pricing, and easy booking – your
+                    premium rental experience starts here.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="vehicles.html"
+                        class="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition duration-300 text-center">Book
+                        a Vehicle</a>
+                    <a href="#vehicles"
+                        class="bg-white hover:bg-gray-100 text-black px-8 py-3 rounded-lg font-semibold transition duration-300 text-center">View
+                        Vehicles</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="vehicles" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Premium Vehicles</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Choose from our exclusive fleet</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transition duration-300 hover:shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="BMW 5 Series" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">BMW 5 Series</h3>
+                        <div class="flex mb-3">
+                            <span class="text-gray-600 mr-3"><i data-feather="users" class="inline mr-1 w-4 h-4"></i> 5
+                                seats</span>
+                            <span class="text-gray-600"><i data-feather="droplet" class="inline mr-1 w-4 h-4"></i>
+                                Petrol</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold">129€<span class="text-gray-500 text-sm">/day</span></span>
+                            <a href="vehicles.html" class="text-red-600 font-medium hover:text-red-700">View
+                                Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transition duration-300 hover:shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="Range Rover Sport" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Range Rover Sport</h3>
+                        <div class="flex mb-3">
+                            <span class="text-gray-600 mr-3"><i data-feather="users" class="inline mr-1 w-4 h-4"></i> 5
+                                seats</span>
+                            <span class="text-gray-600"><i data-feather="droplet" class="inline mr-1 w-4 h-4"></i>
+                                Diesel</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold">199€<span class="text-gray-500 text-sm">/day</span></span>
+                            <a href="vehicles.html" class="text-red-600 font-medium hover:text-red-700">View
+                                Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transition duration-300 hover:shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="Porsche 911" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Porsche 911</h3>
+                        <div class="flex mb-3">
+                            <span class="text-gray-600 mr-3"><i data-feather="users" class="inline mr-1 w-4 h-4"></i> 2
+                                seats</span>
+                            <span class="text-gray-600"><i data-feather="droplet" class="inline mr-1 w-4 h-4"></i>
+                                Petrol</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold">299€<span class="text-gray-500 text-sm">/day</span></span>
+                            <a href="vehicles.html" class="text-red-600 font-medium hover:text-red-700">View
+                                Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="vehicles.html"
+                    class="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition duration-300">View
+                    The Entire Fleet</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Read experiences from satisfied customers</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                                alt="Ana Horvat" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Ana Horvat</h4>
+                            <div class="flex text-yellow-400">
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"The best car rental experience ever! The vehicles are always in perfect
+                        condition, and the service is top-notch."</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                                alt="Marko Kovač" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Marko Kovač</h4>
+                            <div class="flex text-yellow-400">
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Professional service and premium vehicles. I use Maximum rent-a-car for
+                        all my business trips and have never been disappointed."</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                                alt="Ivana Petrić" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Ivana Petrić</h4>
+                            <div class="flex text-yellow-400">
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Renting the Porsche for the weekend was the perfect birthday gift. Quick
+                        and easy reservation, flawless vehicle!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-red-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready for an unforgettable driving experience?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Book your premium vehicle today</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="vehicles.html"
+                    class="bg-white text-red-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition duration-300">Book
+                    a Vehicle</a>
+                <a href="contact.html"
+                    class="bg-transparent border-2 border-white hover:bg-red-700 px-8 py-3 rounded-lg font-semibold transition duration-300">Contact
+                    Us</a>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Tired of Complicated Car Rental Services?</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">We understand the frustrations of traditional car
+                    rental. That's why we're different.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="text-red-600 mb-4">
+                        <i data-feather="alert-circle" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Hidden Costs</h3>
+                    <p class="text-gray-600">Other companies surprise you with extra fees upon pickup. With us, the
+                        price you see is the price you pay.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="text-red-600 mb-4">
+                        <i data-feather="clock" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Long Waiting Times</h3>
+                    <p class="text-gray-600">No paperwork hassle. Our digital process gets you behind the wheel in
+                        minutes, not hours.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="text-red-600 mb-4">
+                        <i data-feather="dollar-sign" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">High Deposits</h3>
+                    <p class="text-gray-600">We offer competitive pricing with flexible deposit options to suit your
+                        budget.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose Maximum rent-a-car?</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">We are redefining what it means to rent a car with
+                    premium service every step of the way.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="benefit-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="shield" class="w-8 h-8 text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Full Insurance Coverage</h3>
+                    <p class="text-gray-600">Comprehensive protection included in every rental for complete peace of
+                        mind.</p>
+                </div>
+
+                <div class="benefit-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="clock" class="w-8 h-8 text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">24/7 Roadside Assistance</h3>
+                    <p class="text-gray-600">Help is just a call away, anytime, anywhere.</p>
+                </div>
+
+                <div class="benefit-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="refresh-cw" class="w-8 h-8 text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Flexible Cancellation</h3>
+                    <p class="text-gray-600">Plans changed? No problem with our 24-hour cancellation policy.</p>
+                </div>
+
+                <div class="benefit-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="wifi" class="w-8 h-8 text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Free Wi-Fi</h3>
+                    <p class="text-gray-600">Stay connected on the road with complimentary mobile Wi-Fi.</p>
+                </div>
+
+                <div class="benefit-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="map-pin" class="w-8 h-8 text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Multiple Locations</h3>
+                    <p class="text-gray-600">Pick up and drop off your vehicle at any of our convenient locations
+                         nationwide.</p>
+                </div>
+
+                <div class="benefit-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="smile" class="w-8 h-8 text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Customer Satisfaction</h3>
+                    <p class="text-gray-600">Rated 4.9/5 by thousands of satisfied customers nationwide.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

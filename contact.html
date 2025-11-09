@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Maximum rent-a-car</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="font-['Inter'] bg-white text-gray-900">
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="text-red-600 font-bold text-2xl">Maximum</span>
+                <span class="font-bold text-2xl">rent-a-car</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-black hover:text-red-600 font-medium">Home</a>
+                <a href="business.html" class="text-black hover:text-red-600 font-medium">Business</a>
+                <a href="about.html" class="text-black hover:text-red-600 font-medium">About Us</a>
+                <a href="vehicles.html" class="text-black hover:text-red-600 font-medium">Vehicles</a>
+                <a href="terms.html" class="text-black hover:text-red-600 font-medium">Rental Terms</a>
+                <a href="contact.html" class="text-red-600 font-medium">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button class="text-black focus:outline-none">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Have questions or want to book a vehicle? Our team is at your disposal.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="contact-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i data-feather="phone" class="w-8 h-8 text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3">Phone</h3>
+                    <p class="text-gray-600 text-center mb-4">Available every day from 8:00 AM to 8:00 PM</p>
+                    <div class="text-center">
+                        <a href="tel:+38511234567" class="text-red-600 font-semibold hover:text-red-700">+385 1 1234 567</a>
+                    </div>
+                </div>
+                
+                <div class="contact-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i data-feather="mail" class="w-8 h-8 text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3">E-mail</h3>
+                    <p class="text-gray-600 text-center mb-4">We respond within 24 hours</p>
+                    <div class="text-center">
+                        <a href="mailto:info@maximum-rent.hr" class="text-red-600 font-semibold hover:text-red-700">info@maximum-rent.hr</a>
+                    </div>
+                </div>
+                
+                <div class="contact-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i data-feather="message-square" class="w-8 h-8 text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3">WhatsApp</h3>
+                    <p class="text-gray-600 text-center mb-4">Quick replies via WhatsApp</p>
+                    <div class="text-center">
+                        <a href="https://wa.me/385911234567" class="text-red-600 font-semibold hover:text-red-700">Send Message</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white p-8 md:p-12 rounded-xl shadow-lg">
+                    <h2 class="text-3xl font-bold mb-6">Send us a Message</h2>
+                    <form>
+                        <div class="grid md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium mb-1">Full Name*</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium mb-1">E-mail Address*</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label for="subject" class="block text-sm font-medium mb-1">Subject*</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-sm font-medium mb-1">Message*</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold transition duration-300">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Locations</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Visit us at any of our locations across Croatia.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-bold mb-4">Zagreb</h3>
+                    <div class="flex items-start mb-4">
+                        <i data-feather="map-pin" class="w-5 h-5 mt-1 mr-3 text-red-600"></i>
+                        <p class="text-gray-600">Poslovna ulica 123, 10000 Zagreb (Business Street 123)</p>
+                    </div>
+                    <div class="flex items-start mb-4">
+                        <i data-feather="phone" class="w-5 h-5 mt-1 mr-3 text-red-600"></i>
+                        <p class="text-gray-600">+385 1 1234 567</p>
+                    </div>
+                    <div class="flex items-start mb-4">
+                        <i data-feather="clock" class="w-5 h-5 mt-1 mr-3 text-red-600"></i>
+                        <p class="text-gray-600">Mon-Fri: 8:00 AM - 8:00 PM<br>Sat: 9:00 AM - 3:00 PM</p>
+                    </div>
+                    <div class="mt-6">
+                        <a href="#" class="text-red-600 font-medium hover:text-red-700 transition">Show on Map →</a>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-bold mb-4">Split</h3>
+                    <div class="flex items-start mb-4">
+                        <i data-feather="map-pin" class="w-5 h-5 mt-1 mr-3 text-red-600"></i>
+                        <p class="text-gray-600">Obala hrvatskog narodnog preporoda 45, 21000 Split</p>
+                    </div>
+                    <div class="flex items-start mb-4">
+                        <i data-feather="phone" class="w-5 h-5 mt-1 mr-3 text-red-600"></i>
+                        <p class="text-gray-600">+385 21 567 890</p>
+                    </div>
+                    <div class="flex items-start mb-4">
+                        <i data-feather="clock" class="w-5 h-5 mt-1 mr-3 text-red-600"></i>
+                        <p class="text-gray-600">Mon-Fri: 8:00 AM - 8:00 PM<br>Sat: 9:00 AM - 3:00 PM</p>
+                    </div>
+                    <div class="mt-6">
+                        <a href="#" class="text-red-600 font-medium hover:text-red-700 transition">Show on Map →</a>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-bold mb-4">Dubrovnik</h3>
+                    <div class="flex items-start mb-4">
+                        <i data-feather="map-pin" class="w-5 h-5 mt-1 mr-3 text-red-600"></i>
+                        <p class="text-gray-600">Vukovarska 22, 20000 Dubrovnik</p>
+                    </div>
+                    <div class="flex items-start mb-4">
+                        <i data-feather="phone" class="w-5 h-5 mt-1 mr-3 text-red-600"></i>
+                        <p class="text-gray-600">+385 20 456 789</p>
+                    </div>
+                    <div class="flex items-start mb-4">
+                        <i data-feather="clock" class="w-5 h-5 mt-1 mr-3 text-red-600"></i>
+                        <p class="text-gray-600">Mon-Fri: 8:00 AM - 8:00 PM<br>Sat: 9:00 AM - 3:00 PM</p>
+                    </div>
+                    <div class="mt-6">
+                        <a href="#" class="text-red-600 font-medium hover:text-red-700 transition">Show on Map →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="rounded-xl overflow-hidden shadow-lg">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.7890741539636!2d15.966758815569535!3d45.795453979106205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDQ3JzQzLjYiTiAxNcKwNTgnMDcuNiJF!5e0!3m2!1sen!2shr!4v1620000000000!5m2!1sen!2shr" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Quick answers to your questions.</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="mb-6 border-b border-gray-200 pb-6">
+                    <h3 class="text-xl font-bold mb-3">What are the branch operating hours?</h3>
+                    <p class="text-gray-600">Our branches are open Monday to Friday from 8:00 AM to 8:00 PM, and Saturdays from 9:00 AM to 3:00 PM. Branches are closed on Sundays and public holidays, but you can contact us by phone or via the website.</p>
+                </div>
+                
+                <div class="mb-6 border-b border-gray-200 pb-6">
+                    <h3 class="text-xl font-bold mb-3">Can I pick up the vehicle outside of working hours?</h3>
+                    <p class="text-gray-600">Yes, we can arrange after-hours vehicle pickup with prior notice and for an additional fee of 25 EUR. Please contact us at least 24 hours in advance so we can organize the pickup.</p>
+                </div>
+                
+                <div class="mb-6 border-b border-gray-200 pb-6">
+                    <h3 class="text-xl font-bold mb-3">How can I change or cancel a reservation?</h3>
+                    <p class="text-gray-600">Reservation changes and cancellations are possible via email or phone. To cancel without a fee, you must notify us at least 24 hours before vehicle pickup. For cancellations within less than 24 hours, a fee equal to 50% of the total rental price will be charged.</p>
+                </div>
+                
+                <div class="mb-6 pb-6">
+                    <h3 class="text-xl font-bold mb-3">When will I receive a reply to my inquiry?</h3>
+                    <p class="text-gray-600">We strive to respond to all inquiries within 24 hours. Responses may be slightly slower during weekends and holidays. For urgent inquiries, please contact us by phone.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-red-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready for an unforgettable driving experience?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Book your premium vehicle today.</p>
+            <a href="vehicles.html" class="inline-block bg-white text-red-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition duration-300">Book a Vehicle</a>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <span class="text-red-600 font-bold text-2xl">Maximum</span>
+                        <span class="font-bold text-2xl">rent-a-car</span>
+                    </div>
+                    <p class="text-gray-400">Premium mobile solutions for business and leisure.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="business.html" class="text-gray-400 hover:text-white transition">Business</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="vehicles.html" class="text-gray-400 hover:text-white transition">Vehicles</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Information</h3>
+                    <ul class="space-y-2">
+                        <li><a href="terms.html" class="text-gray-400 hover:text-white transition">Rental Terms</a></li>
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="faq.html" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i data-feather="phone" class="w-4 h-4 mr-2"></i>
+                            <span class="text-gray-400">+385 1 1234 567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="mail" class="w-4 h-4 mr-2"></i>
+                            <span class="text-gray-400">info@maximum-rent.hr</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="map-pin" class="w-4 h-4 mr-2"></i>
+                            <span class="text-gray-400">Poslovna ulica 123, Zagreb (Business Street 123, Zagreb)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2023 Maximum rent-a-car. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
