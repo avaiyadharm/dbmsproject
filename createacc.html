@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Account</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+  <div class="bg-white shadow-xl rounded-lg p-8 w-full max-w-md">
+
+    <h2 class="text-2xl font-bold text-center mb-6 text-gray-800">Create Account</h2>
+    <form id="signup-form">
+
+      <label class="block mb-2 text-gray-700 font-medium">Email</label>
+      <input 
+        id="email"
+        type="email" 
+        placeholder="Enter your email"
+        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 mb-4"
+        required
+      />
+
+      <label class="block mb-2 text-gray-700 font-medium">Password</label>
+      <input 
+        id="password"
+        type="password" 
+        placeholder="Choose a password"
+        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 mb-6"
+        required
+      />
+
+      <button 
+        type="submit"
+        class="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-medium transition"
+      >
+        Sign Up
+      </button>
+      </form>
+    
+    <p class="text-center text-gray-600 mt-4">
+        Already have an account? <a href="login.html" class="text-red-600 hover:text-red-800 font-medium">Login here</a>
+    </p>
+
+    <p id="message" class="text-center text-red-600 mt-4"></p>
+
+  </div>
+
+
+  <script>
+    // ⚠️ IMPORTANT: Replace these with your actual Supabase project URL and Anon Key
+    const SUPABASE_URL = "https://ikztkpjzzazzwcffksju.supabase.co";
+    const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlrenRrcGp6emF6endjZmZrc2p1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI3NTQyMjgsImV4cCI6MjA3ODMzMDIyOH0.lH7VSqNUHoixANcq1JKzJp_DG9nqWrTJ4hOZDgRMx9s";
+
+    const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+    const signupForm = document.getElementById("signup-form"); // Form ID updated
+    const messageBox = document.getElementById("message");
+
+    signupForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      messageBox.textContent = "Creating account...";
+
+      // 👇 KEY CHANGE: Using supabaseClient.auth.signUp for account creation
+      const { data, error } = await supabaseClient.auth.signUp({
+        email,
+        password,
+        // Optional: Include an options object to set a redirect URL after email confirmation
+        options: {
+            emailRedirectTo: window.location.origin + '/login.html'
+        }
+      });
+
+      if (error) {
+        messageBox.textContent = "Error creating account: " + error.message;
+      } else {
+        // Supabase sends a confirmation email by default when using signUp
+        // The user must confirm their email before they can successfully log in.
+        messageBox.textContent = "✅ Success! Please check your email to confirm your account and then try logging in.";
+        
+        // Optional: Clear the form fields
+        document.getElementById("email").value = "";
+        document.getElementById("password").value = "";
+      }
+    });
+  </script>
+
+</body>
+</html>

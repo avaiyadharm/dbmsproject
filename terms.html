@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rental Terms | Maximum rent-a-car</title>
+    <title>Vehicles | Maximum rent-a-car</title>
     <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/feather-icons"></script>
@@ -11,8 +11,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        .term-item:hover {
-            background-color: #f9fafb;
+        .vehicle-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .filter-btn.active {
+            background-color: #dc2626;
+            color: white;
         }
     </style>
 </head>
@@ -28,7 +33,7 @@
                 <a href="business.html" class="text-black hover:text-red-600 font-medium">Business</a>
                 <a href="about.html" class="text-black hover:text-red-600 font-medium">About Us</a>
                 <a href="vehicles.html" class="text-black hover:text-red-600 font-medium">Vehicles</a>
-                <a href="terms.html" class="text-red-600 font-medium">Rental Terms</a>
+                <a href="terms.html" class="text-red-600 font-medium">Rental Cars</a>
                 <a href="contact.html" class="text-black hover:text-red-600 font-medium">Contact</a>
             </div>
             <div class="md:hidden">
@@ -41,167 +46,315 @@
 
     <section class="py-20 bg-gray-50">
         <div class="container mx-auto px-6">
-            <div class="text-center">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6">Rental Terms</h1>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Get informed about the rules and conditions for renting a vehicle with Maximum rent-a-car.</p>
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Our Premium Fleet</h1>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Choose the ideal vehicle for your needs from our carefully selected collection.</p>
             </div>
         </div>
     </section>
 
-    <section class="py-16 bg-white">
+    <section class="py-8 bg-white sticky top-16 z-40 shadow-sm">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Key Terms at a Glance</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">The most important information in one place.</p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8 mb-12">
-                <div class="term-item bg-gray-50 p-6 rounded-xl transition duration-300">
-                    <div class="text-red-600 mb-4">
-                        <i data-feather="calendar" class="w-10 h-10"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Minimum Rental</h3>
-                    <p class="text-gray-600">The minimum rental duration is 24 hours. Short-term rentals are available for a special fee.</p>
-                </div>
-                
-                <div class="term-item bg-gray-50 p-6 rounded-xl transition duration-300">
-                    <div class="text-red-600 mb-4">
-                        <i data-feather="user-check" class="w-10 h-10"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Age Limits</h3>
-                    <p class="text-gray-600">Rental permitted for persons aged 21 and older with a minimum of 2 years of driving experience.</p>
-                </div>
-                
-                <div class="term-item bg-gray-50 p-6 rounded-xl transition duration-300">
-                    <div class="text-red-600 mb-4">
-                        <i data-feather="credit-card" class="w-10 h-10"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Deposit</h3>
-                    <p class="text-gray-600">The deposit ranges from 500 to 1500 EUR depending on the vehicle category. It is fully refunded after the vehicle return.</p>
-                </div>
-                
-                <div class="term-item bg-gray-50 p-6 rounded-xl transition duration-300">
-                    <div class="text-red-600 mb-4">
-                        <i data-feather="shield" class="w-10 h-10"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Insurance</h3>
-                    <p class="text-gray-600">All vehicles have basic comprehensive insurance with deductible (excess). Full insurance is available for an additional fee.</p>
-                </div>
-                
-                <div class="term-item bg-gray-50 p-6 rounded-xl transition duration-300">
-                    <div class="text-red-600 mb-4">
-                        <i data-feather="droplet" class="w-10 h-10"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Fuel</h3>
-                    <p class="text-gray-600">The vehicle is rented with a full tank and must be returned with a full tank.</p>
-                </div>
-                
-                <div class="term-item bg-gray-50 p-6 rounded-xl transition duration-300">
-                    <div class="text-red-600 mb-4">
-                        <i data-feather="clock" class="w-10 h-10"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Return Time</h3>
-                    <p class="text-gray-600">Delay in returning the vehicle after the agreed time will be charged as an additional rental day.</p>
-                </div>
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="filter-btn px-6 py-2 rounded-full bg-red-600 text-white transition active" data-category="all">
+                    All Vehicles
+                </button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-100 hover:bg-gray-200 transition" data-category="economy">
+                    Economy Class
+                </button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-100 hover:bg-gray-200 transition" data-category="business">
+                    Business Class
+                </button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-100 hover:bg-gray-200 transition" data-category="luxury">
+                    Luxury Vehicles
+                </button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-100 hover:bg-gray-200 transition" data-category="suv">
+                    SUV & Off-road
+                </button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-100 hover:bg-gray-200 transition" data-category="van">
+                    Vans & Minivans
+                </button>
             </div>
         </div>
     </section>
 
     <section class="py-16 bg-gray-50">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Detailed Rental Conditions</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Everything you need to know before booking a vehicle.</p>
-            </div>
-            
-            <div class="max-w-3xl mx-auto">
-                <div class="mb-8">
-                    <h3 class="text-2xl font-bold mb-4 text-red-600">1. General Conditions</h3>
-                    <p class="text-gray-600 mb-4">All users of Maximum rent-a-car services are obliged to adhere to these rental conditions. The rental agreement enters into force upon signature by the contracting parties and is valid for the specified period of vehicle use.</p>
-                    <p class="text-gray-600">Rentals can be made online via our website or directly at our branches. A down payment of 30% of the total rental amount is required to confirm the reservation.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="vehicle-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300" data-category="business">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                             alt="BMW 5 Series" 
+                             class="w-full h-48 object-cover"
+                             loading="lazy">
+                        <span class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            Popular
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">BMW 5 Series</h3>
+                            <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-semibold">Business Class</span>
+                        </div>
+                        <div class="flex mb-3">
+                            <span class="text-gray-600 mr-3"><i data-feather="users" class="inline mr-1 w-4 h-4"></i> 5 Seats</span>
+                            <span class="text-gray-600"><i data-feather="droplet" class="inline mr-1 w-4 h-4"></i> Petrol</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Business class comfort with dynamic performance for demanding travelers.</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-2xl font-bold">₹12900</span>
+                                <span class="text-gray-500">/day</span>
+                            </div>
+                            <a href="login.html" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-medium transition duration-300">Book Now</a>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="mb-8">
-                    <h3 class="text-2xl font-bold mb-4 text-red-600">2. Renter's Obligations</h3>
-                    <p class="text-gray-600 mb-4">The renter is obliged to:</p>
-                    <ul class="list-disc pl-6 text-gray-600 space-y-2">
-                        <li>Use the vehicle in accordance with its purpose and technical capabilities</li>
-                        <li>Comply with legal provisions on traffic safety</li>
-                        <li>Not transfer the vehicle to third parties without the written permission of Maximum rent-a-car</li>
-                        <li>Immediately report any damage to the vehicle or traffic accident</li>
-                        <li>Return the vehicle within the agreed period and in the condition in which it was received</li>
-                    </ul>
+                <div class="vehicle-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300" data-category="luxury">
+                    <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                         alt="Range Rover Sport" 
+                         class="w-full h-48 object-cover"
+                         loading="lazy">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Range Rover Sport</h3>
+                            <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-semibold">Luxury Class</span>
+                        </div>
+                        <div class="flex mb-3">
+                            <span class="text-gray-600 mr-3"><i data-feather="users" class="inline mr-1 w-4 h-4"></i> 5 Seats</span>
+                            <span class="text-gray-600"><i data-feather="droplet" class="inline mr-1 w-4 h-4"></i> Diesel</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">An elegant SUV with impressive off-road capabilities and premium amenities.</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-2xl font-bold">₹10000</span>
+                                <span class="text-gray-500">/day</span>
+                            </div>
+                            <a href="login.html" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-medium transition duration-300">Book Now</a>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="mb-8">
-                    <h3 class="text-2xl font-bold mb-4 text-red-600">3. Prices and Payment</h3>
-                    <p class="text-gray-600 mb-4">Rental prices include:</p>
-                    <ul class="list-disc pl-6 text-gray-600 space-y-2">
-                        <li>Unlimited mileage</li>
-                        <li>Basic vehicle insurance</li>
-                        <li>24/7 roadside assistance</li>
-                        <li>VAT according to applicable rates</li>
-                    </ul>
-                    <p class="text-gray-600 mt-4">Additional fees may apply for:</p>
-                    <ul class="list-disc pl-6 text-gray-600 space-y-2">
-                        <li>Additional drivers</li>
-                        <li>Crossing state borders (upon request)</li>
-                        <li>Child seats</li>
-                        <li>GPS navigation</li>
-                    </ul>
+                <div class="vehicle-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300" data-category="economy">
+                    <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                         alt="Volkswagen Golf" 
+                         class="w-full h-48 object-cover"
+                         loading="lazy">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Volkswagen Golf</h3>
+                            <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-semibold">Economy Class</span>
+                        </div>
+                        <div class="flex mb-3">
+                            <span class="text-gray-600 mr-3"><i data-feather="users" class="inline mr-1 w-4 h-4"></i> 5 Seats</span>
+                            <span class="text-gray-600"><i data-feather="droplet" class="inline mr-1 w-4 h-4"></i> Diesel</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">A reliable and economical choice for daily driving and city mobility.</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-2xl font-bold">₹15000</span>
+                                <span class="text-gray-500">/day</span>
+                            </div>
+                            <a href="login.html" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-medium transition duration-300">Book Now</a>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="mb-8">
-                    <h3 class="text-2xl font-bold mb-4 text-red-600">4. Insurance and Liability</h3>
-                    <p class="text-gray-600 mb-4">All vehicles are insured according to legal provisions. The renter bears financial responsibility for all damage to the vehicle and third parties resulting from:</p>
-                    <ul class="list-disc pl-6 text-gray-600 space-y-2">
-                        <li>Using the vehicle under the influence of alcohol or narcotics</li>
-                        <li>Unauthorized driving</li>
-                        <li>Using the vehicle outside the agreed conditions</li>
-                        <li>Non-compliance with traffic regulations</li>
-                    </ul>
+                <div class="vehicle-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300" data-category="suv">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                             alt="Audi Q7" 
+                             class="w-full h-48 object-cover"
+                             loading="lazy">
+                        <span class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            Available
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Audi Q7</h3>
+                            <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-semibold">SUV</span>
+                        </div>
+                        <div class="flex mb-3">
+                            <span class="text-gray-600 mr-3"><i data-feather="users" class="inline mr-1 w-4 h-4"></i> 7 Seats</span>
+                            <span class="text-gray-600"><i data-feather="droplet" class="inline mr-1 w-4 h-4"></i> Diesel</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Spacious and comfortable vehicle for family trips and outdoor adventures.</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-2xl font-bold">₹14000</span>
+                                <span class="text-gray-500">/day</span>
+                            </div>
+                            <a href="login.html" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-medium transition duration-300">Book Now</a>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="mb-8">
-                    <h3 class="text-2xl font-bold mb-4 text-red-600">5. Reservation Cancellation</h3>
-                    <p class="text-gray-600 mb-4">Reservations can be canceled free of charge no later than 24 hours before the planned vehicle pickup. For cancellations within less than 24 hours, a fee equal to 50% of the total rental price will be charged.</p>
-                    <p class="text-gray-600">Maximum rent-a-car reserves the right to cancel the reservation in case of force majeure or technical problems with the vehicle, with a full refund of the paid amount.</p>
+                <div class="vehicle-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300" data-category="van">
+                    <img src="https://stimg.cardekho.com/images/carexteriorimages/930x620/Mercedes-Benz/Mercedes-Benz-V-Class/6769/1548316722622/exterior-image-164.jpg" 
+                         alt="Mercedes V-Class" 
+                         class="w-full h-48 object-cover"
+                         loading="lazy">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Mercedes V-Class</h3>
+                            <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-semibold">Van</span>
+                        </div>
+                        <div class="flex mb-3">
+                            <span class="text-gray-600 mr-3"><i data-feather="users" class="inline mr-1 w-4 h-4"></i> 8 Seats</span>
+                            <span class="text-gray-600"><i data-feather="droplet" class="inline mr-1 w-4 h-4"></i> Diesel</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">A premium minivan with superb comfort and space for large groups.</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-2xl font-bold">₹9000</span>
+                                <span class="text-gray-500">/day</span>
+                            </div>
+                            <a href="login.html" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-medium transition duration-300">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="vehicle-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300" data-category="luxury">
+                    <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                         alt="Porsche 911" 
+                         class="w-full h-48 object-cover"
+                         loading="lazy">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Porsche 911</h3>
+                            <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-semibold">Luxury Class</span>
+                        </div>
+                        <div class="flex mb-3">
+                            <span class="text-gray-600 mr-3"><i data-feather="users" class="inline mr-1 w-4 h-4"></i> 2 Seats</span>
+                            <span class="text-gray-600"><i data-feather="droplet" class="inline mr-1 w-4 h-4"></i> Petrol</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">An iconic sports car with exceptional performance and style.</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-2xl font-bold">₹24500</span>
+                                <span class="text-gray-500">/day</span>
+                            </div>
+                            <a href="login.html" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-medium transition duration-300">Book Now</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-16 bg-white">
+    <section class="py-20 bg-white">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Answers to the most common questions related to vehicle rental.</p>
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Top Rated Vehicles</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Vehicles that won over our customers.</p>
             </div>
             
-            <div class="max-w-3xl mx-auto">
-                <div class="mb-6 border-b border-gray-200 pb-6">
-                    <h3 class="text-xl font-bold mb-3">What is the deposit for vehicle rental?</h3>
-                    <p class="text-gray-600">The deposit depends on the vehicle category and ranges from 500 to 1500 EUR. The exact deposit amount will be shown to you during the reservation process. The deposit is fully refunded after the vehicle is inspected and determined to have no damage.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                            <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" 
+                                 alt="BMW 5 Series" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">BMW 5 Series</h3>
+                            <div class="flex items-center">
+                                <div class="flex text-yellow-400">
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                </div>
+                                <span class="text-gray-500 ml-2">4.9 (87)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Perfect blend of comfort and performance. The BMW 5 is my choice for business travel."</p>
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 rounded-full overflow-hidden mr-3">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" 
+                                 alt="Ana Horvat" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <p class="font-medium">Ana Horvat</p>
+                            <p class="text-sm text-gray-500">Business Traveler</p>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="mb-6 border-b border-gray-200 pb-6">
-                    <h3 class="text-xl font-bold mb-3">What is included in the rental price?</h3>
-                    <p class="text-gray-600">The basic rental price includes unlimited mileage, basic vehicle insurance (comprehensive with deductible), 24/7 roadside assistance, and VAT. Additional services such as an extra driver, GPS navigation, or child seats are charged separately.</p>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                            <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" 
+                                 alt="Audi Q7" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Audi Q7</h3>
+                            <div class="flex items-center">
+                                <div class="flex text-yellow-400">
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                </div>
+                                <span class="text-gray-500 ml-2">4.8 (76)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Spacious and comfortable for the whole family. Ideal for summer holidays on the coast."</p>
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 rounded-full overflow-hidden mr-3">
+                            <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" 
+                                 alt="Marko Kovač" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <p class="font-medium">Marko Kovač</p>
+                            <p class="text-sm text-gray-500">Family Man</p>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="mb-6 border-b border-gray-200 pb-6">
-                    <h3 class="text-xl font-bold mb-3">Can I cross the border with the rented vehicle?</h3>
-                    <p class="text-gray-600">Yes, international rental is possible with prior notice and an additional fee for crossing the border. A list of permitted countries is available at our branches. An additional agreement must be signed before crossing the border.</p>
-                </div>
-                
-                <div class="mb-6 border-b border-gray-200 pb-6">
-                    <h3 class="text-xl font-bold mb-3">What if a traffic accident occurs?</h3>
-                    <p class="text-gray-600">In the event of a traffic accident, contact us immediately at the emergency number listed in the rental agreement. Before leaving the scene of the accident, be sure to collect information about other participants and request a police report. Do not repair anything on the vehicle without our authorization.</p>
-                </div>
-                
-                <div class="mb-6 border-b border-gray-200 pb-6">
-                    <h3 class="text-xl font-bold mb-3">Can I extend the vehicle rental?</h3>
-                    <p class="text-gray-600">Yes, you can extend the rental by contacting us at least 24 hours before the expiry of the current rental agreement. Extension is possible with our consent and depends on vehicle availability. An additional fee will be charged for extending the rental beyond the initially agreed period.</p>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                            <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" 
+                                 alt="Range Rover Sport" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Range Rover Sport</h3>
+                            <div class="flex items-center">
+                                <div class="flex text-yellow-400">
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                </div>
+                                <span class="text-gray-500 ml-2">5.0 (92)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"An impressive vehicle that handles equally well on road and off-road. True luxury!"</p>
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 rounded-full overflow-hidden mr-3">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" 
+                                 alt="Ivana Petrović" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <p class="font-medium">Ivana Petrović</p>
+                            <p class="text-sm text-gray-500">Adventurer</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -209,8 +362,8 @@
 
     <section class="py-20 bg-red-600 text-white">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Still have questions?</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto">Our team is always available to provide you with further clarification and assistance.</p>
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Didn't find the right vehicle?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Contact us for a personalized quote or special requests.</p>
             <a href="contact.html" class="inline-block bg-white text-red-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition duration-300">Contact Us</a>
         </div>
     </section>
@@ -268,6 +421,33 @@
 
     <script>
         feather.replace();
+        
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons and reset styles
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                    btn.classList.remove('bg-red-600', 'text-white');
+                    btn.classList.add('bg-gray-100', 'hover:bg-gray-200');
+                });
+                
+                // Add active class to clicked button and update styles
+                button.classList.add('active', 'bg-red-600', 'text-white');
+                button.classList.remove('bg-gray-100', 'hover:bg-gray-200');
+                
+                const category = button.dataset.category;
+                const vehicles = document.querySelectorAll('.vehicle-card');
+                
+                vehicles.forEach(vehicle => {
+                    if (category === 'all' || vehicle.dataset.category === category) {
+                        vehicle.style.display = 'block';
+                    } else {
+                        vehicle.style.display = 'none';
+                    }
+                });
+            });
+        });
     </script>
 </body>
 </html>

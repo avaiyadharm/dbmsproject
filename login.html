@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+  <div class="bg-white shadow-xl rounded-lg p-8 w-full max-w-md">
+
+    <h2 class="text-2xl font-bold text-center mb-6 text-gray-800">Login</h2>
+
+    <form id="login-form">
+
+      <label class="block mb-2 text-gray-700 font-medium">Email</label>
+      <input 
+        id="email"
+        type="email" 
+        placeholder="Enter your email"
+        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 mb-4"
+        required
+      />
+
+      <label class="block mb-2 text-gray-700 font-medium">Password</label>
+      <input 
+        id="password"
+        type="password" 
+        placeholder="Enter your password"
+        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 mb-6"
+        required
+      />
+
+      <button 
+        type="submit"
+        class="w-full bg-red-600 hover:bg-red-700 text-white py-2 rounded-lg font-medium transition"
+      >
+        Login
+      </button>
+    </form>
+    
+    <p class="text-center text-gray-600 mt-4">
+        Don't have an account? <a href="createacc.html" class="text-red-600 hover:text-red-800 font-medium">Sign Up here</a>
+    </p>
+
+    <p id="message" class="text-center text-red-600 mt-4"></p>
+
+  </div>
+
+
+  <script>
+    // ⚠️ IMPORTANT: Replace these with your actual Supabase project URL and Anon Key
+    const SUPABASE_URL = "https://ikztkpjzzazzwcffksju.supabase.co";
+    const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlrenRrcGp6emF6endjZmZrc2p1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI3NTQyMjgsImV4cCI6MjA3ODMzMDIyOH0.lH7VSqNUHoixANcq1JKzJp_DG9nqWrTJ4hOZDgRMx9s";
+
+    const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+    const loginForm = document.getElementById("login-form");
+    const messageBox = document.getElementById("message");
+
+    loginForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      messageBox.textContent = "Logging in...";
+
+      // 👇 KEY FUNCTION: Used to sign in an existing user
+      const { data, error } = await supabaseClient.auth.signInWithPassword({
+        email,
+        password
+      });
+
+      if (error) {
+        messageBox.textContent = "Error: " + error.message;
+      } else {
+        // Check if the user object exists and is confirmed (standard Supabase flow)
+        if (data.user) {
+            messageBox.textContent = "✅ Login Successful!";
+            // Redirect to a secure page after successful login
+            window.location.href = "terms.html"; 
+        } else {
+             messageBox.textContent = "Login failed. Check your credentials or confirm your email.";
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>
